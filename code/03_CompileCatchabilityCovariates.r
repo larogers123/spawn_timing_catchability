@@ -63,3 +63,10 @@ fullcovs <- fullcovs %>%
 #### Save file for future analysis and plotting
 
 write.csv(fullcovs,"../Results/CatchabilityCovariates_CandidateList.csv",row.names=F)
+
+
+#### Save subset of covariates for WHAM model testing
+
+whamcovs<-fullcovs %>%
+  select(year, Fem30p_wt_logit, mismatchmed, MAR) %>%
+  rename(MAR_SST = MAR)
