@@ -236,3 +236,35 @@ g <- bind_rows(repars.tab.all) %>%
   labs(y='Estimated RW process SD') + facet_wrap('Ecov')
 ggsave("../Results/WHAM/repars_comparison.png", g, width=7, height=5)
 
+## ## Session info from last time run
+## R version 4.3.1 (2023-06-16 ucrt)
+## Platform: x86_64-w64-mingw32/x64 (64-bit)
+## Running under: Windows 10 x64 (build 19045)
+
+## Matrix products: default
+
+
+## locale:
+## [1] LC_COLLATE=English_United States.utf8
+## [2] LC_CTYPE=English_United States.utf8
+## [3] LC_MONETARY=English_United States.utf8
+## [4] LC_NUMERIC=C
+## [5] LC_TIME=English_United States.utf8
+
+## time zone: America/Los_Angeles
+## tzcode source: internal
+
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base
+
+## other attached packages:
+## [1] purrr_1.0.2           GOApollock_0.1.0.9000 ggplot2_3.4.4
+## [4] tidyr_1.3.0           dplyr_1.1.4           wham_1.0.6
+
+## loaded via a namespace (and not attached):
+##  [1] utf8_1.2.4       R6_2.5.1         tidyselect_1.2.0 magrittr_2.0.3
+##  [5] gtable_0.3.4     glue_1.6.2       tibble_3.2.1     pkgconfig_2.0.3
+##  [9] generics_0.1.3   lifecycle_1.0.4  cli_3.6.2        fansi_1.0.6
+## [13] scales_1.3.0     grid_4.3.1       vctrs_0.6.5      withr_2.5.2
+## [17] compiler_4.3.1   tools_4.3.1      munsell_0.5.0    pillar_1.9.0
+## [21] colorspace_2.1-0 rlang_1.1.2
