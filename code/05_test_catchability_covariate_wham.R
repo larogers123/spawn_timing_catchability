@@ -9,11 +9,10 @@ getwd()
 ## This analysis is very sensitive to the version of WHAM that is
 ## used, for reasons other than what is explored here. We
 ## strongly recommend installing this version:
-## devtools::install_github('timjmiller/wham', ref='16770d4',
-## dependencies=TRUE)
+## devtools::install_github("timjmiller/wham", ref='v1.0.6', dependencies=TRUE)
+## See further installation instructions here:
+## https://github.com/timjmiller/wham?tab=readme-ov-file#installation
 
-## pretty close
-## devtools::install_github("timjmiller/wham", ref='18ebd73')
 library(wham)
 library(dplyr)
 library(tidyr)
@@ -27,13 +26,12 @@ source("wham_functions.R")
 
 ## Get WHAM initial values setup to be close by using the output
 ## from ADMB
-
 ## original ADMB fit in 2021
 arep <- read_pk_rep('../Data/pk_wham', version='pkwham', endyr=2021)
 asap3 <- read_asap3_dat("../Data/goa_pk_asap3.txt")
 input <- readRDS('../Data/akwham_input_2021.RDS')
 years <- arep$years
-## saveRDS(input, 'akwham_input_2021.RDS')
+## saveRDS(input, '../Data/akwham_input_2021.RDS')
 
 
 ## check that wham matches admb still
@@ -48,6 +46,8 @@ fit0 <- fit_wham(input0, do.osa=FALSE, do.fit=0, do.retro=FALSE,
                  do.sdrep=0, MakeADFun.silent=0)
 
 ## Compare WHAM at initial values to ADMB model
+png('../Results/WHAM/wham_vs_admb_check.png', width=5, height=6,
+    units='in', res=300)
 par(mfrow=c(3,1))
 plot(years, arep$Expected_spawning_biomass*1e6, ylab='SSB')
 lines(years, fit0$rep$SSB, col=1)
@@ -56,11 +56,15 @@ lines(years, fit0$rep$q[,1])
 plot(years, arep$Expected_survey_1_index[2,]*1e6, ylab='Expected index')
 lines(years, exp(fit0$rep$pred_log_indices[,1]))
 ## Yes matches q and index perfectly, some small differences in
-## SSB due to structural differences
+## SSB due to structural differences. This shows that we were
+## able to closely match the structure of the two modeling
+## platforms. Lingering differnces are highlighted in the main
+## text.
+dev.off()
 
 ## Setup the Ecov list.
 set.seed(12131)
-n.noise <- 2
+n.noise <- 2 ## adding fake covariates to understand behavior when beta=0
 env.dat <- read.csv('../Data/CatchabilityCovariates_2023-03-29.csv') %>% filter(year>=1992)
  ## normalize the covariates?
 env.dat[,2] <-
