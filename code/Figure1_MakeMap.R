@@ -14,7 +14,7 @@ shp.mp.LL<-spTransform(shp.mp,CRS("+proj=longlat"))
 bathy<-getNOAA.bathy(-170,-130,52,62,keep=T,resolution=8,path="../Data/Mapping")
 
 #Maturity sample locations
-matdat<-read.csv("../Results/CompiledMaturityData_HaulsinAssessment_Females.csv")
+matdat<-read.csv("../Data/CompiledMaturityData_HaulsinAssessment_Females.csv")
 matdat <- matdat %>%
   distinct(CruiseHaul,.keep_all=TRUE) %>%
   select(longitude,latitude)

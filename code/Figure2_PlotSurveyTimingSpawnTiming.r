@@ -10,6 +10,7 @@ Timing<-read.csv("../Results/SurveySpawnTiming_to2021.csv")
 #### SURVEY TIMING AND SPAWN TIMING #####
 
 today<-Sys.Date()
+#pdf(paste0("../Figures/Fig2_SurveyandMedSpawnTiming_",today,".pdf"),width=8,height=6)
 png(paste0("../Figures/Fig2_SurveyandMedSpawnTiming_",today,".png"),units="in",width=8,height=6,res=300)
 
 par(mar=c(4,5,1,1))

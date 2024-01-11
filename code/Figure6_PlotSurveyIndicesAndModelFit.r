@@ -149,3 +149,4 @@ g2
 
 ggsave(paste0("../Figures/Fig6_Observed_v_model_biomass_4panels_",Sys.Date(),".png"),width=12,height=6)
 
+ggsave(paste0("../Figures/Fig6_Observed_v_model_biomass_4panels_",Sys.Date(),".pdf"),width=12,height=6)

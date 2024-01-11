@@ -119,6 +119,9 @@ ggsave(filename = "../Figures/Fig5_Mod0SurveyResids_vs_3Covariates_wTimeseries.p
        plot=grid.arrange(ps1,p2, p3, p4, ncol=2),
        width = 9, height = 8)
 
+ggsave(filename = "../Figures/Fig5_Mod0SurveyResids_vs_3Covariates_wTimeseries.pdf",
+       plot=grid.arrange(ps1,p2, p3, p4, ncol=2),
+       width = 9, height = 8)
 
 
 

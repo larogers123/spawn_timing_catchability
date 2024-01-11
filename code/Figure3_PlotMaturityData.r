@@ -38,5 +38,6 @@ ggplot(mat_stage_weighted, aes(x=year,y=wt_prop,fill=factor(mat5stage))) +
 #  geom_line(data=pmat, mapping= aes(x=year,y=Fem30p_wt),inherit.aes=FALSE) # Confirmed that this is same as Fem30p_wt for Pspsp
 
 ggsave("../Figures/Fig3_Maturity_AllFemales30p_wt.png",width=8,height=5)
+#ggsave("../Figures/Fig3_Maturity_AllFemales30p_wt.pdf",width=8,height=5)
 
 
