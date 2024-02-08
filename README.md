@@ -1,6 +1,8 @@
 # spawn_timing_catchability
 
-This repository contains data and code necessary to reproduce the results in Rogers, Monnahan, Williams, Jones & Dorn (in review) Climate-driven changes in spawn timing and availability of walleye pollock to assessment surveys in the Gulf of Alaska.
+This repository contains data and code necessary to reproduce the results in:
+
+Rogers, L.A., Monnahan, C.C., Williams, K., Jones, D.T., and Dorn, M.W. 2024. Climate-driven changes in the timing of spawning and the availability of walleye pollock (_Gadus chalcogrammus_) to assessment surveys in the Gulf of Alaska. ICES Journal of Marine Science: fsae005. [doi:10.1093/icesjms/fsae005.](https://doi.org/10.1093/icesjms/fsae005)
 
 This study looks at whether changes in spawn timing of Gulf of Alaska walleye pollock (_Gadus chalcogrammus_) relative to the timing of the winter Shelikof acoustic-trawl survey have affected their availability to the survey. We construct catchability covariates based on larval-derived spawn timing estimates as well as observations of spawning status of female pollock collected during the winter acoustic-trawl survey. We then fit state-space stock assessment models using the Woods Hole Assessment Model (WHAM; Stock and Miller 2021) which incorporate these catchability covariates, and find that models with the timing-based catchability covariates provide a better fit to survey data than models without. 
 
