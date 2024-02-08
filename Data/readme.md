@@ -13,7 +13,7 @@ Walleye pollock specimen data from acoustic-trawl surveys conducted by the Midwa
 *fork_length:* fork length of fish, in cm  
 
 **MeanVarHatchSpawn_01Sep20_NewAgeLengthREwStn_extendeddates_thru19.csv**  
-Estimates of the start, midpoint, and end of spawning of walleye pollock as estimated from larvae collected during NOAA AFSC EcoFOCI spring larval surveys (1979-2019). Estimates are from Rogers, L.A., and Dougherty, A.B. 2019. Effects of climate and demography on reproductive phenology of a harvested marine fish population. Global Change Biology 25(2): 708–720. doi:10.1111/gcb.14483, with updates described in Rogers et al. (in review).
+Estimates of the start, midpoint, and end of spawning of walleye pollock as estimated from larvae collected during NOAA AFSC EcoFOCI spring larval surveys (1979-2019). Estimates are from Rogers, L.A., and Dougherty, A.B. 2019. Effects of climate and demography on reproductive phenology of a harvested marine fish population. Global Change Biology 25(2): 708–720. doi:10.1111/gcb.14483, with updates described in Rogers et al. 2024 ICES J. Mar. Sci.
 
 *MeanSpawnLR:* Day of year of estimated mean date of spawning, as derived from larval otolith data.  
 *VarSpawnLR:* Variance of the estimated day of year of spawning  
